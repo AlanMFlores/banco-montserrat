@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Moneda Extranjera</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <button class="hamb-menu">
+            <img src="../images/hamb-menu.svg" alt="hamburger menu">
+        </button>
+        <nav class="nav">
+            <button class="close-menu">
+                <img src="../images/close.svg" alt="close menu">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list--item"><a href="../index.html">Home</a></li>
+                <li class="nav-list--item"><a href="savings-bank.html">Caja de Ahorro</a></li>
+                <li class="nav-list--item"><a href="exchange.html" class="selected">Moneda Extranjera</a></li>
+                <li class="nav-list--item"><a href="fixed-term.html">Plazo Fijo</a></li>
+                <li class="nav-list--item"><a href="loan.html">Préstamos Personales</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+    <main class="main">
+        <div class="main-intro">
+            <p class="breadcrumb">Inversiones</p>
+            <h1 class="main-title">Moneda Extranjera</h1>
+        </div>
+
+        <form action="" class="form">
+            <div class="forn-conversion-amount">
+                <label for="conversion-amount">Importe a Convertir:</label>
+                <input type="number" name="conversion-amount" id="conversion-amount" placeholder="ARS">
+            </div>
+
+            <p class="dolar-value">$181,00 + Impuesto 65% = u$s 1,00</p>
+
+            <div class="form-final-value">
+                <label for="final-value">Importe Convertido</label>
+                <input type="number" name="final-value" id="final-value" placeholder="USD">
+            </div>
+                
+            <div class="form-buttons">
+                <button class="form-calculation">Convertir</button>
+                <button class="form-clear">Borrar</button>
+            </div>
+
+        </form>
+
+        <section class="advertisement">
+            <small class="advertisement-description">
+                El uso de esta herramienta no implica celebrar contrato alguno con Banco Montserrat. La exhibición de los productos, servicios o información financiera que se brinda a través de la misma, sólo tiene carácter informativo y orientativo.
+            </small>
+        </section>
+
+        <section class="operations">
+            <div class="operations-title">Otras Operaciones</div>
+            <a href="loan.html">Préstamos Personales</a>
+            <a href="fixed-term.html">Simulador de Plazo Fijo</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img src="../images/isologo.svg" alt="footer logo">
+        <small class="footer-description">Banco Montserrat</small>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/animation.js"></script>
+    <script src="../scripts/exchange.js"></script>
+</body>
+</html>

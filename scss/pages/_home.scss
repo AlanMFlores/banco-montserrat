@@ -1,0 +1,221 @@
+.home {
+
+    .home-intro {
+        padding: $columns-mobile;
+
+        @include media (x-medium-dev) {
+            padding: $columns-tablet;
+        }
+
+        @include media (large-dev) {
+            padding: $columns-desktop;
+        }
+    }
+
+    .home-title {
+        font-size: $fs-largest-title;
+        margin-bottom: 16px;
+
+        @include media(large-dev) {
+            font-size: 3.2rem;
+        }
+    }
+}
+
+
+.hero {
+    position: relative;
+    margin-bottom: 16px;
+
+    @include media(x-medium-dev) {
+        margin-bottom: 32px;
+    }
+
+    &-image {
+
+        @include media(x-medium-dev) {
+            height: 360px;
+        }
+
+        @include media(large-dev) {
+            height: 496px;
+        }
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $clr-main-color;
+            mix-blend-mode: color;
+            opacity: .5;
+        }
+
+        img {
+            position: relative;
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &-copy {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 24px;
+
+        @include media(x-medium-dev) {
+            left: 72px;
+        }
+
+        @include media (large-dev) {
+            left: 144px;
+        }
+
+
+        &--title {
+            width: 70%;
+            margin-bottom: 16px;
+            font-size: $fs-largest-title;
+            color: $clr-white-color;
+            text-shadow: 0 2px 5px $clr-dark-gray-color;
+
+            @include media(x-medium-dev) {
+                font-size: 4rem;
+                margin-bottom: 32px;
+            }
+
+            @include media(large-dev) {
+                font-size: 6.4rem;
+            }
+        }
+        
+    }
+}
+
+.dolar {
+    padding: $columns-mobile;
+    margin-bottom: 24px ;
+
+    @include media(x-medium-dev) {
+        padding: $columns-tablet;
+        margin-bottom: 32px;
+    }
+
+    @include media (large-dev) {
+        padding: $columns-desktop;
+        margin-bottom: 48px;
+    }
+
+    &-price {
+        display: flex;
+        justify-content: center;
+        gap: 8px;
+        border-top: 1px solid $clr-gray-color;
+        padding-top: 16px;
+        margin-bottom: 16px;
+
+        p {
+            font-size: $fs-medium-title;
+        }
+
+        &--purchase, &--sale {
+            color: $clr-main-color;
+        }
+    }
+
+    &-exchange {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border-bottom: 1px solid $clr-gray-color;
+        padding-bottom: 16px;
+    }
+}
+
+.services {
+    padding: $columns-mobile;
+
+    @include media(x-medium-dev) {
+        padding: $columns-tablet;
+        margin-bottom: 32px;
+    }
+
+    @include media (large-dev) {
+        padding: $columns-desktop;
+        margin-bottom: 48px;
+    }
+    
+    &-title {
+        font-size: $fs-largest-title;
+        text-align: center;
+        margin-bottom: 16px;
+
+        @include media(x-medium-dev) {
+            margin-bottom: 24px;
+            font-size: 3.2rem;
+        }
+    }
+
+    &-card {
+        img {
+            width: 48px;
+            height: 48px;
+        }
+
+        a {
+
+            @include media(large-dev) {
+                max-width: none;
+            }
+        }
+    }
+
+    &-grid {
+        @include media(large-dev) {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 32px;
+        }
+    }
+}
+
+.contact {
+    text-align: center;
+    background-color: $clr-light-color;
+    padding: 32px 24px;
+    margin-bottom: 48px;
+
+    @include media(x-medium-dev) {
+        padding: 32px 72px;
+    }
+
+    &-title {
+        font-size: $fs-largest-title;
+        margin-bottom: 24px;
+
+        @include media(large-dev) {
+            font-size: 3.2rem;
+        }
+    }
+
+    p {
+        margin-bottom: 12px;
+    }
+
+    &-social-networks {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    &-number {
+        font-size: $fs-phone-number;
+        color: $clr-main-color;
+    }
+}

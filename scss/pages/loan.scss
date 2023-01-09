@@ -1,0 +1,56 @@
+.form {
+
+    .loan-amount-specs {
+        display: block;
+        font-size: $fs-medium-title;
+        font-weight: 300;
+        color: $clr-main-color;
+        margin-bottom: 16px;
+    }
+
+    .fees {
+
+        &-title {
+            margin-bottom: 8px;
+        }
+
+        &-btns {
+            display: flex;
+            gap: 8px;
+            margin-bottom: 16px;
+        }
+
+        &-btn {
+            width: 38px;
+            height: 38px;
+            border: none;
+            background-color: $clr-light-gray-color;
+            color: $clr-dark-color;
+            font-size: $fs-medium-title;
+            font-weight: 400;
+        }
+
+        &-value {
+            margin-bottom: 16px
+        }
+
+        .loan-payment {
+            margin-bottom: 24px;
+        }
+    }
+
+    &-loan-request {
+        @include main-btn;
+    }
+
+    .fee-value, .payment-amount {
+        font-weight: 600;
+        font-size: $fs-medium-title;
+        margin-left: 8px;
+    }
+
+    .fee-selected {
+        background-color: $clr-main-color;
+        color: $clr-white-color;
+    }
+}

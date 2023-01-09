@@ -1,0 +1,117 @@
+.savings {
+
+    &-intro {
+        padding: $columns-mobile;
+
+        @include media(x-medium-dev) {
+            padding: $columns-tablet;
+        }
+
+        @include media (large-dev) {
+            padding: $columns-desktop;
+        }
+    }
+
+    &-title {
+        font-size: 3.2rem;
+        margin-bottom: 16px;
+    }
+}
+
+.info {
+     padding: $columns-mobile;
+     margin-top: 24px;
+     margin-bottom: 24px;
+     text-align: center;
+
+    @include media(x-medium-dev) {
+        padding: $columns-tablet;
+        margin-bottom: 32px;
+    }
+
+    @include media(large-dev) {
+        padding: $columns-desktop;
+    }
+
+     &-title {
+        color: $clr-main-color;
+        font-size: $fs-largest-title;
+        margin-bottom: 16px;
+
+        @include media(x-medium-dev) {
+            font-size: 3.2rem;
+        }
+     }
+
+     &-description {
+        margin-bottom: 8px;
+     }
+}
+
+.benefits {
+    padding: $columns-mobile;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+    gap: 16px;
+
+    @include media(x-medium-dev) {
+        padding: $columns-tablet;
+    }
+
+    @include media(large-dev) {
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    &-box {
+        display: grid;
+        place-items: center;
+        padding: 16px;
+        background-color: $clr-light-color;
+        border-radius: 0 0 32px 0;
+
+        img {
+            width: 48px;
+            margin-bottom: 8px;
+        }
+
+        h3 {
+            font-size: $fs-medium-title;
+            font-weight: 400;
+        }
+    }
+
+    &-title {
+        font-size: $fs-largest-title;
+        text-align: center;
+        color: $clr-main-color;
+        margin-top: 24px;
+        margin-bottom: 24px;
+
+        @include media(x-medium-dev) {
+            margin-top: 32px;
+            font-size: 3.2rem;
+        }
+
+    }
+
+    &-copy {
+        padding: $columns-mobile;
+        text-align: center;
+    }
+}
+
+.savings-bank-request{
+    padding: $columns-mobile;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.savings-bank-btn {
+    @include main-btn;
+    margin-top: 24px;
+    margin-bottom: 48px;
+}
+

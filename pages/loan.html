@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Préstamos Personales</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <button class="hamb-menu">
+            <img src="../images/hamb-menu.svg" alt="hamburger menu">
+        </button>
+        <nav class="nav">
+            <button class="close-menu">
+                <img src="../images/close.svg" alt="close menu">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list--item"><a href="../index.html">Home</a></li>
+                <li class="nav-list--item"><a href="savings-bank.html">Caja de Ahorro</a></li>
+                <li class="nav-list--item"><a href="exchange.html">Moneda Extranjera</a></li>
+                <li class="nav-list--item"><a href="fixed-term.html">Plazo Fijo</a></li>
+                <li class="nav-list--item"><a href="loan.html" class="selected">Préstamos Personales</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+    <main class="main">
+        <div class="main-intro">
+            <p class="breadcrumb">Préstamos</p>
+            <h1 class="main-title">Préstamos Personales</h1>
+        </div>
+
+        <form action="" class="form">
+            <div class="form-loan-amount">
+                <label for="loan-amount">Importe a solicitar:</label>
+                <input type="number" name="loan-amount" id="loan-amount" placeholder="100.000,00">
+                <small class="loan-amount-specs">¡Tenés $1.000.000 disponibles!</small>
+            </div>
+
+            <div class="fees">
+                <p class="fees-title">Cuotas:</p>
+                <div class="fees-btns">
+                    <button class="fees-btn">1</button>
+                    <button class="fees-btn">3</button>
+                    <button class="fees-btn">6</button>
+                    <button class="fees-btn">9</button>
+                    <button class="fees-btn">12</button>
+                    <button class="fees-btn">18</button>
+                    <button class="fees-btn">24</button>
+                </div>
+
+                <p class="fees-value">
+                    Valor de la Cuota: <span class="fee-value">-</span>
+                </p>
+
+                <p class="loan-payment">
+                    Importe total a devolver: <span class="payment-amount">-</span>   
+                </p>
+            </div>
+
+            <div class="form-buttons">
+                <button class="form-loan-request">Solicitar Préstamo</button>
+            </div>
+
+        </form>
+
+        <section class="advertisement">
+            <small class="advertisement-description">
+                El uso de esta herramienta no implica celebrar contrato alguno con Banco Montserrat. La exhibición de los productos, servicios o información financiera que se brinda a través de la misma, sólo tiene carácter informativo y orientativo.
+            </small>
+        </section>
+
+        <section class="operations">
+            <div class="operations-title">Otras Operaciones</div>
+            <a href="exchange.html">Moneda Extranjera</a>
+            <a href="fixed-term.html">Simulador de Plazo Fijo</a>
+        </section>
+
+        <div class="sb-modal">
+            <button class="sb-modal-close">
+                <img src="../images/close.svg" alt="close-modal">
+            </button>
+
+            <h2 class="sb-modal-title">Completá con tus datos</h2>
+
+            <form action="">
+                <label for="sb-modal-name">
+                    Nombre
+                </label>
+                <input type="text" name="sb-modal-name" id="sb-modal-name" placeholder="Julián">
+                <label for="sb-modal-lastname">
+                    Apellido 
+                </label>
+                <input type="text" name="sb-modal-lastname" id="sb-modal-name" placeholder="Álvarez">
+                <label for="sb-modal-dni">
+                    DNI 
+                </label>
+                <input type="number" name="sb-modal-dni" id="sb-modal-name" placeholder="42.912.418">
+                <label for="sb-modal-telephone">
+                    Número de Teléfono
+                </label>
+                <input type="number" name="sb-modal-name" id="sb-modal-name" placeholder="1525874596">
+                <label for="sb-modal-email">
+                    Email
+                </label>
+                <input type="email" name="sb-modal-name" id="sb-modal-name" placeholder="julianalvarez@gmail.com">
+
+                <button class="sb-modal-btn main-btn">Solicitar Préstamo</button>
+            </form>
+        </div>
+        <div class="modal-overlay"></div>
+
+    </main>
+
+    <footer class="footer">
+        <img src="../images/isologo.svg" alt="footer logo">
+        <small class="footer-description">Banco Montserrat</small>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/animation.js"></script>
+    <script src="../scripts/loan.js"></script>
+</body>
+</html>

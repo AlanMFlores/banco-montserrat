@@ -1,0 +1,25 @@
+.services-card {
+    margin-bottom: 24px;
+    padding: 24px;
+    background-color: $clr-white-color;
+    border-top: 4px solid $clr-main-color;
+    border-radius: 0 0 32px 0;
+    box-shadow: 0px 2px 5px rgba(30, 30, 30, 0.25);
+
+    &--icon {
+        margin-bottom: 16px;
+    }
+
+    &--title {
+        font-size: $fs-medium-title;
+        margin-bottom: 16px;
+    }
+
+    &--description {
+        margin-bottom: 16px;
+    }
+
+    &--btn {
+        @include main-btn;
+    }
+}

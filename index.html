@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Banco Montserrat | Home</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="index.html">
+                <img src="images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <button class="hamb-menu">
+            <img src="images/hamb-menu.svg" alt="hamburger menu">
+        </button>
+        <nav class="nav">
+            <button class="close-menu">
+                <img src="images/close.svg" alt="close menu">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list--item"><a href="index.html" class="selected">Home</a></li>
+                <li class="nav-list--item"><a href="pages/savings-bank.html">Caja de Ahorro</a></li>
+                <li class="nav-list--item"><a href="pages/exchange.html">Moneda Extranjera</a></li>
+                <li class="nav-list--item"><a href="pages/fixed-term.html">Plazo Fijo</a></li>
+                <li class="nav-list--item"><a href="pages/loan.html">Préstamos Personales</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+    <main class="home">
+        <div class="home-intro">
+            <p class="breadcrumb">Home</p>
+            <h1 class="home-title">¡Bienvenido/a!</h1>
+        </div>
+
+        <section class="hero">
+            <div class="hero-image">
+                <img src="images/hero-image.jpg" alt="">
+            </div>
+            <div class="hero-copy">
+                <h2 class="hero-copy--title">Confianza y Profesionalismo</h2>
+                <a href="#services" class="main-btn">Ver Servicios</a>
+            </div>
+        </section>
+
+        <section class="dolar">
+            <div class="dolar-price">
+                <p>Dólar:</p>
+                <p class="dolar-price--purchase">Compra: $173,00 </p>
+                <p class="dolar-price--sale">| Venta: $181,00</p>
+            </div>
+            <div class="dolar-exchange">
+                <img src="images/exchange.svg" alt="exchange icon">
+                <a href="pages/exchange.html">Realizar Operaciones de Cambio</a>
+            </div>
+        </section>
+        
+        <section class="services" id="services">
+            <h2 class="services-title">
+                ¿Qué estás buscando?
+            </h2>
+            <div class="services-grid">
+                <article class="services-card">
+                    <img src="images/savings.svg" alt="ahorro icono" class="services-card--icon">
+                    <h3 class="services-card--title">Caja de Ahorro Gratis</h3>
+                    <p class="services-card--description">Solicita tu caja de ahorro gratuita y disfrutá de los mejores beneficios.</p>
+                    <a href="pages/savings-bank.html" class="services-card--btn">+ Detalles</a>
+                </article>
+                <article class="services-card">
+                    <img src="images/bill.svg" alt="ahorro icono" class="services-card--icon">
+                    <h3 class="services-card--title">Préstamo Personal</h3>
+                    <p class="services-card--description">Solicita tu préstamo personal a tasa preferencial y usalo para lo que quieras.</p>
+                    <a href="pages/loan.html" class="services-card--btn">+ Detalles</a>
+                </article>
+                <article class="services-card">
+                    <img src="images/investment.svg" alt="ahorro icono" class="services-card--icon">
+                    <h3 class="services-card--title">Plazo Fijo</h3>
+                    <p class="services-card--description">Consolidá tu plazo fijo y ganá con tu dinero sin moverte de tu casa.</p>
+                    <a href="pages/fixed-term.html" class="services-card--btn">+ Detalles</a>
+                </article>
+            </div>
+        </section>
+
+        <section class="contact">
+            <h2 class="contact-title">
+                ¡Contactanos!
+            </h2>
+            <p class="contact-timetable">De lunes a viernes de 8 a 20 hs.</p>
+            <div class="contact-social-networks">
+                <a href="#"><img src="images/facebook.svg" alt="facebook icon"></a>
+                <a href="#"><img src="images/twitter.svg" alt="twitter icon"></a>
+                <a href="#"><img src="images/whatsapp.svg" alt="whatsapp icon"></a>
+            </div>
+
+            <p class="conctact-atention-center">A nuestro Centro de Atención al Cliente.</p>
+
+            <h3 class="contact-number">0800-777-1812</h3>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img src="images/isologo.svg" alt="footer logo">
+        <small class="footer-description">Banco Montserrat</small>
+    </footer>
+    
+    <script src="scripts/animation.js"></script>
+</body>
+</html>

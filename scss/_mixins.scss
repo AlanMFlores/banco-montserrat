@@ -1,0 +1,47 @@
+@mixin main-btn {
+    display: block;
+    padding: 8px 24px;
+    background-color: $clr-main-color;
+    color: $clr-white-color;
+    border: none;
+    cursor: pointer;
+    transition: all 300ms;
+    max-width: 190px;
+    text-align: center;
+    font-size: 1.6rem;
+
+    &:hover {
+        background-color: $clr-main-color-hover;
+    }
+
+    @include media(x-medium-dev) {
+        max-width: 200px;
+    }
+
+    @include media(large-dev) {
+        max-width: 320px;
+    }
+}
+
+@mixin input-number {
+    display: block;
+    width: 100%;
+    height: 40px;
+    padding: 16px;
+    margin-bottom: 4px;
+    background-color: $clr-light-color;
+    border: none;
+    color: $clr-main-color;
+    font-size: $fs-medium-title;
+    font-weight: 600;
+
+    &::placeholder {
+        color: $clr-gray-color;
+        font-size: $fs-medium-title;
+        font-weight: 300;
+    }
+
+    &:focus {
+        outline: none;
+    }
+}

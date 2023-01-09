@@ -1,0 +1,16 @@
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: $clr-dark-color;
+    padding: 24px;
+
+    img {
+        width: 32px;
+        margin-bottom: 8px;
+    }
+
+    &-description {
+        color: $clr-white-color;
+    }
+}

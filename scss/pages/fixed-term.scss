@@ -1,0 +1,99 @@
+.main {
+    padding: $columns-mobile;
+
+    &-title {
+        @include media(x-medium-dev) {
+            text-align: center;   
+        }
+
+        @include media(large-dev) {
+            font-size: 3.2rem
+        }
+    }
+    
+    @include media(x-medium-dev) {
+        padding: $columns-tablet;
+    }
+
+    @include media(large-dev) {
+        padding: $columns-desktop;
+    }
+}
+
+.form {
+
+    @include media(x-medium-dev) {
+        max-width: 320px;
+        margin: 0 auto;
+        margin-top: 32px;
+    }
+
+    &-capital, &-days {
+        margin-bottom: 16px;
+    }
+
+    &-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    &-calculation, &-clear {
+        @include main-btn;
+    }
+
+}
+
+.advertisement {
+    margin-bottom: 24px;
+
+    &-description {
+        display: block;
+        padding-top: 16px;
+        padding-bottom: 16px;
+        border-top: 1px solid $clr-gray-color;
+        border-bottom: 1px solid $clr-gray-color;
+        font-weight: 300;
+        color: $clr-dark-gray-color;
+    }
+
+}
+
+.operations {
+    margin-bottom: 48px;
+
+    &-title {
+        font-size: $fs-medium-title;
+        margin-bottom: 16px;
+    }
+
+    a {
+        display: block;
+        margin-bottom: 8px;
+    }
+}
+
+.fixed-term-result {
+    display: none;
+    margin: 16px auto;
+    
+    .results {
+        padding-top: 16px;
+        border-top: 1px solid $clr-gray-color;
+
+        p {
+            margin-bottom: 16px;
+        }
+    
+        span {
+            color: $clr-main-color;
+        }
+    }
+
+    button {
+        margin: 0 auto;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+}

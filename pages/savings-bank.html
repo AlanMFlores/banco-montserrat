@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Caja de Ahorro | Banco Montserrat</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <button class="hamb-menu">
+            <img src="../images/hamb-menu.svg" alt="hamburger menu">
+        </button>
+        <nav class="nav">
+            <button class="close-menu">
+                <img src="../images/close.svg" alt="close menu">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list--item"><a href="../index.html">Home</a></li>
+                <li class="nav-list--item"><a href="savings-bank.html" class="selected"">Caja de Ahorro</a></li>
+                <li class="nav-list--item"><a href="exchange.html">Moneda Extranjera</a></li>
+                <li class="nav-list--item"><a href="fixed-term.html">Plazo Fijo</a></li>
+                <li class="nav-list--item"><a href="loan.html">Préstamos Personales</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+    <main class="savings">
+        <div class="savings-intro">
+            <p class="breadcrumb">Ahorro</p>
+            <h1 class="savings-title">Caja de Ahorro Gratis</h1>
+        </div>
+
+        <div class="hero">
+            <div class="hero-image">
+                <img src="../images/savings-bank-woman.jpg" alt="">
+            </div>
+            <div class="hero-copy">
+                <h2 class="hero-copy--title">
+                    Tenemos una cuenta gratis para vos
+                </h2>
+                <a href="#services" class="savings-bank-btn main-btn">Pedila Online</a>
+            </div>
+        </div>
+
+        <div class="info">
+            <h2 class="info-title">¡Mucho más que una cuenta!</h2>  
+
+            <p class="info-description">
+                Abrí tu caja de ahorro ahora más fácil y 100% online, bonificada de por vida.
+            </p>
+            <p class="info-description">
+                Recibí tu tarjeta de débito en casa y disfrutá de beneficios exclusivos.
+            </p>
+        </div>
+        
+        <div class="benefits">
+            <div class="benefits-box">
+                <img src="../images/dollar.svg" alt="signo dolar">
+                <h3>Gratis</h3>
+            </div>
+            <div class="benefits-box">
+                <img src="../images/computer.svg" alt="signo dolar">
+                <h3>Solicitud online</h3>
+            </div>
+            <div class="benefits-box">
+                <img src="../images/discount.svg" alt="signo dolar">
+                <h3>Beneficios</h3>
+            </div>
+            <div class="benefits-box">
+                <img src="../images/gift.svg" alt="signo dolar">
+                <h3>Promociones</h3>
+            </div>
+        </div>
+
+        <h2 class="benefits-title">
+            ¡Todos los meses disfrutá de promociones exclusivas!
+        </h2>
+
+        <div class="savings-bank-request">
+            <p class="benefits-copy">Pedila online y empezá a disfrutar de todos los beneficios de tu cuenta en Banco Montserrat</p>
+
+            <button class="savings-bank-btn">Pedila Online</button>
+        </div>
+
+        <div class="sb-modal">
+            <button class="sb-modal-close">
+                <img src="../images/close.svg" alt="close-modal">
+            </button>
+
+            <h2 class="sb-modal-title">Solicitar Caja de Ahorro Gratis</h2>
+            <p class="sb-modal-copy">Para solicitar tu Caja de Ahorro gratis, te podes acercar a cualquiera de <a href="#">nuestras sucursales</a> o bien, completar el siguiente formulario para realizarlo de manera 100% online.</p>
+
+            <form action="">
+                <label for="sb-modal-name">
+                    Nombre
+                </label>
+                <input type="text" name="sb-modal-name" id="sb-modal-name" placeholder="Julián">
+                <label for="sb-modal-lastname">
+                    Apellido 
+                </label>
+                <input type="text" name="sb-modal-lastname" id="sb-modal-name" placeholder="Álvarez">
+                <label for="sb-modal-dni">
+                    DNI 
+                </label>
+                <input type="number" name="sb-modal-dni" id="sb-modal-name" placeholder="42.912.418">
+                <label for="sb-modal-telephone">
+                    Número de Teléfono
+                </label>
+                <input type="number" name="sb-modal-name" id="sb-modal-name" placeholder="1525874596">
+                <label for="sb-modal-email">
+                    Email
+                </label>
+                <input type="email" name="sb-modal-name" id="sb-modal-name" placeholder="julianalvarez@gmail.com">
+
+                <button class="sb-modal-btn main-btn">Solicitar Producto</button>
+            </form>
+        </div>
+        <div class="modal-overlay"></div>
+
+    </main>
+
+    <footer class="footer">
+        <img src="../images/isologo.svg" alt="footer logo">
+        <small class="footer-description">Banco Montserrat</small>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/animation.js"></script>
+    <script src="../scripts/savings-bank.js"></script>
+</body>
+</html>

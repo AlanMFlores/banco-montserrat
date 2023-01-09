@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../images/isologo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="../css/main.css">
+    <title>Simulador de Plazo Fijo</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-logo">
+            <a href="../index.html">
+                <img src="../images/logo.svg" alt="logo">
+            </a>
+        </div>
+        <button class="hamb-menu">
+            <img src="../images/hamb-menu.svg" alt="hamburger menu">
+        </button>
+        <nav class="nav">
+            <button class="close-menu">
+                <img src="../images/close.svg" alt="close menu">
+            </button>
+            <ul class="nav-list">
+                <li class="nav-list--item"><a href="../index.html">Home</a></li>
+                <li class="nav-list--item"><a href="savings-bank.html">Caja de Ahorro</a></li>
+                <li class="nav-list--item"><a href="exchange.html">Moneda Extranjera</a></li>
+                <li class="nav-list--item"><a href="fixed-term.html" class="selected"">Plazo Fijo</a></li>
+                <li class="nav-list--item"><a href="loan.html">Préstamos Personales</a></li>
+            </ul>
+        </nav>
+        <div class="nav-overlay"></div>
+    </header>
+    <main class="main">
+        <div class="main-intro">
+            <p class="breadcrumb">Inversiones</p>
+            <h1 class="main-title">Simulador de Plazo Fijo</h1>
+        </div>
+
+        <form action="" class="form">
+            <div class="form-capital">
+                <label for="capital-amount">Capital a Invertir:</label>
+                <input type="number" name="capital-amount" id="capital-amount" placeholder="100.000,00">
+                <small class="capital-amount-specs">(Monto mínimo $1000 - máximo: $10.000.000)</small>
+            </div>
+
+            <div class="form-days">
+                <label for="term-days">Plazo (en días):</label>
+                <input type="number" name="term-days" id="term-days" placeholder="30">
+                <small class="term-days-specs">(Mínimo 30 días - máximo 365 días)</small>
+            </div>
+                
+            <div class="form-buttons">
+                <button class="form-calculation">Calcular</button>
+                <button class="form-clear">Borrar</button>
+            </div>
+        </form>
+
+        <section class="fixed-term-result">
+            <div class="results">
+                <p>Capital: <span class="capital-result">-</span></p>
+                <p>Plazo: <span class="term-days-result">-</span></p>
+                <p>Intereses Ganados: <span class="earned-interest-result"><span>-</span></p>
+                <p>Monto Total: <span class="total-amount-result">-</span></p>
+
+                <button class="constitute-fixed-term main-btn">Constituir</button>
+
+            </div>
+        </section>
+
+        <section class="advertisement">
+            <small class="advertisement-description">
+                El uso de esta herramienta no implica celebrar contrato alguno con Banco Montserrat. La exhibición de los productos, servicios o información financiera que se brinda a través de la misma, sólo tiene carácter informativo y orientativo.
+            </small>
+        </section>
+
+        <section class="operations">
+            <div class="operations-title">Otras Operaciones</div>
+            <a href="loan.html">Préstamos Personales</a>
+            <a href="exchange.html">Moneda Extranjera</a>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <img src="../images/isologo.svg" alt="footer logo">
+        <small class="footer-description">Banco Montserrat</small>
+    </footer>
+    
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/animation.js"></script>
+    <script src="../scripts/fixed-term.js"></script>
+</body>
+</html>
