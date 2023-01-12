@@ -1,8 +1,35 @@
 /* ----- ----- Moneda Extranjera ----- ----- */
 
+/* ----- Dolar API ----- */
+
+const getDolarValue = async () => {
+    const response = await fetch('https://www.dolarsi.com/api/api.php?type=valoresprincipales')
+    const dolarValue = await response.json();
+    const oficialDollar = dolarValue[0].casa.venta;
+    return oficialDollar
+}
+
+getDolarValue()
+    .then(val => {
+        dollarSellPrice.innerHTML = val
+
+        const conversionFormula = (amount) => {
+            const valueConverted = amount / (parseInt(val) * 1.65);
+            return valueConverted;
+        }
+
+        conversionAmount.addEventListener('keyup', (e) => {
+            let amount = e.target.value;
+            let convertedAmount = conversionFormula(amount);
+            finalValue.value = convertedAmount.toFixed(2);
+        })
+    }
+)
+
 /* ----- Section ----- */
 
 const exchangeForm = document.querySelector('.form');
+const dollarSellPrice = document.querySelector('.dollar-sell')
 
 /* ----- Buttons ----- */
 const conversionBtn = document.querySelector('.form-calculation');
@@ -14,18 +41,6 @@ const conversionAmount = document.getElementById('conversion-amount');
 const finalValue = document.getElementById('final-value');
 
 /* ----- Valor del Dolar ----- */
-const dolarValue = 298.65;
-
-const conversionFormula = (amount) => {
-    const valueConverted = amount / dolarValue;
-    return valueConverted;
-}
-
-conversionAmount.addEventListener('keyup', (e) => {
-    let amount = e.target.value;
-    let convertedAmount = conversionFormula(amount);
-    finalValue.value = convertedAmount.toFixed(2);
-})
 
 conversionBtn.addEventListener('click', (e) => {
     e.preventDefault()
@@ -49,3 +64,4 @@ clearFormBtn.addEventListener('click', (e) => {
     e.preventDefault()
     exchangeForm.reset();
 })
+
