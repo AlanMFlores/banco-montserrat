@@ -52,6 +52,11 @@ small {
 li {
   list-style: none; }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
 input[type="number"], [type="text"], [type="email"] {
   display: block;
   width: 100%;
@@ -62,7 +67,7 @@ input[type="number"], [type="text"], [type="email"] {
   border: none;
   color: #E16428;
   font-size: 1.6rem;
-  font-weight: 600; }
+  font-weight: 500; }
   input[type="number"]::placeholder, [type="text"]::placeholder, [type="email"]::placeholder {
     color: #8A969B;
     font-size: 1.6rem;
@@ -83,7 +88,7 @@ input[type="number"], [type="text"], [type="email"] {
   padding: 8px 24px;
   background-color: #E16428;
   color: #FAFAFA;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
   transition: all 300ms;
   max-width: 190px;
@@ -209,7 +214,7 @@ input[type="number"], [type="text"], [type="email"] {
     padding: 8px 24px;
     background-color: #E16428;
     color: #FAFAFA;
-    border: none;
+    border-color: transparent;
     cursor: pointer;
     transition: all 300ms;
     max-width: 190px;
@@ -268,6 +273,8 @@ input[type="number"], [type="text"], [type="email"] {
     margin: 0 auto;
     margin-top: 16px;
     margin-bottom: 32px; }
+  .sb-modal .input-error {
+    border: 1px solid red; }
 
 .modal-mini-title {
   font-size: 2rem;
@@ -476,7 +483,7 @@ input[type="number"], [type="text"], [type="email"] {
   padding: 8px 24px;
   background-color: #E16428;
   color: #FAFAFA;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
   transition: all 300ms;
   max-width: 190px;
@@ -534,6 +541,17 @@ input[type="number"], [type="text"], [type="email"] {
 .form-final-value {
   margin-bottom: 24px; }
 
+.input-currency {
+  position: relative; }
+
+.currency {
+  position: absolute;
+  right: 24px;
+  top: 30%;
+  font-size: 1.4rem;
+  color: #E16428;
+  opacity: .6; }
+
 .form .loan-amount-specs {
   display: block;
   font-size: 1.6rem;
@@ -556,7 +574,8 @@ input[type="number"], [type="text"], [type="email"] {
   background-color: #D9D9D9;
   color: #272121;
   font-size: 1.6rem;
-  font-weight: 400; }
+  font-weight: 400;
+  cursor: pointer; }
 
 .form .fees-value {
   margin-bottom: 16px; }
@@ -569,7 +588,7 @@ input[type="number"], [type="text"], [type="email"] {
   padding: 8px 24px;
   background-color: #E16428;
   color: #FAFAFA;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
   transition: all 300ms;
   max-width: 190px;
@@ -592,6 +611,10 @@ input[type="number"], [type="text"], [type="email"] {
 .form .fee-selected {
   background-color: #E16428;
   color: #FAFAFA; }
+
+.alert-error {
+  color: red;
+  font-size: 1.4rem; }
 
 .savings-intro {
   padding: 0 24px; }
@@ -678,7 +701,7 @@ input[type="number"], [type="text"], [type="email"] {
   padding: 8px 24px;
   background-color: #E16428;
   color: #FAFAFA;
-  border: none;
+  border-color: transparent;
   cursor: pointer;
   transition: all 300ms;
   max-width: 190px;
@@ -694,3 +717,7 @@ input[type="number"], [type="text"], [type="email"] {
   @media only screen and (min-width: 1024px) {
     .savings-bank-btn {
       max-width: 320px; } }
+
+.alert-error {
+  color: red;
+  font-size: 1.4rem; }

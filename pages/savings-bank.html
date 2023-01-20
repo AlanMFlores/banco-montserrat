@@ -98,7 +98,7 @@
             <h2 class="sb-modal-title">Solicitar Caja de Ahorro Gratis</h2>
             <p class="sb-modal-copy">Para solicitar tu Caja de Ahorro gratis, te podes acercar a cualquiera de <a href="#">nuestras sucursales</a> o bien, completar el siguiente formulario para realizarlo de manera 100% online.</p>
 
-            <form action="">
+            <form action="" id="savings-bank-form" autocomplete="off">
                 <label for="sb-modal-name">
                     Nombre
                 </label>
@@ -119,6 +119,8 @@
                     Email
                 </label>
                 <input type="email" name="sb-modal-email" id="sb-modal-email" placeholder="julianalvarez@gmail.com" required>
+
+                <p class="alert-error"></p>
 
                 <button class="sb-modal-btn main-btn">Solicitar Producto</button>
             </form>

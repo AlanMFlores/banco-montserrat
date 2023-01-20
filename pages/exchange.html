@@ -41,14 +41,21 @@
         <form action="" class="form">
             <div class="forn-conversion-amount">
                 <label for="conversion-amount">Importe a Convertir:</label>
-                <input type="number" name="conversion-amount" id="conversion-amount" placeholder="ARS">
+                <div class="input-currency">
+                    <input type="number" name="conversion-amount" id="conversion-amount" placeholder="100.000">
+                    <span class="currency">ARS</span>
+                </div>
             </div>
 
             <p class="dolar-value"> <span class="dollar-sell">0</span> + Impuesto 65% = u$s 1,00</p>
 
             <div class="form-final-value">
                 <label for="final-value">Importe Convertido</label>
-                <input type="number" name="final-value" id="final-value" placeholder="USD">
+                <div class="input-currency">
+                    <input type="number" name="final-value" id="final-value" placeholder="300">
+                    <span class="currency">USD</span>
+                </div>
+                <p class="alert-error"></p>
             </div>
                 
             <div class="form-buttons">

@@ -7,3 +7,16 @@
 .form-final-value {
     margin-bottom: 24px;
 }
+
+.input-currency {
+    position: relative;
+}
+
+.currency {
+    position: absolute;
+    right: 24px;
+    top: 30%;
+    font-size: 1.4rem;
+    color: $clr-main-color;
+    opacity: .6;
+}

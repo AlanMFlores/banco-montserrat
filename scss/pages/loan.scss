@@ -28,6 +28,7 @@
             color: $clr-dark-color;
             font-size: $fs-medium-title;
             font-weight: 400;
+            cursor: pointer;
         }
 
         &-value {
@@ -53,4 +54,9 @@
         background-color: $clr-main-color;
         color: $clr-white-color;
     }
+}
+
+.alert-error {
+    color: red;
+    font-size: 1.4rem;
 }

@@ -1,78 +1,58 @@
-/* ----- ----- Plazo Fijo ----- ----- */
-
-/* ----- Sections ----- */
-const form = document.querySelector('.form');
-const fixedTermResult = document.querySelector('.fixed-term-result')
-
-/* ----- Inputs ----- */
-const capital = document.getElementById('capital-amount');
-const termDays = document.getElementById('term-days');
-
-/* ----- Buttons ----- */
-const calculate = document.querySelector('.form-calculation');
-const clear = document.querySelector('.form-clear');
-const constituteFixedTerm = document.querySelector('.constitute-fixed-term');
-
-/* ----- Results ----- */
-
-const capitalDisplay = document.querySelector('.capital-result')
-const termDaysDisplay = document.querySelector('.term-days-result')
-const earnedInterestDisplay = document.querySelector('.earned-interest-result');
-const totalAmountDisplay = document.querySelector('.total-amount-result')
-
-/* ----- Operations ----- */
-
 const interestRate = 0.208;
 
-const getEarnedInterest = (capital, termDays) => {
-    const earnedInterest = (capital * (interestRate * termDays)) / 100;
-    return earnedInterest;
-} 
+const getEarnedInterest = (capital, termDays) => (capital * (interestRate * termDays)) / 100;
 
-const getTotalAmount = (capital, earnedInterest) => {
-    const totalAmount = Number(capital) + Number(earnedInterest);
-    return totalAmount;
-}
+const getTotalAmount = (capital, earnedInterest) => Number(capital) + Number(earnedInterest);
 
-const simulateFixedTerm = () => {
-    let capitalResult = capital.value.toLocaleString('en');
-    let termDaysResult = termDays.value;
-    let earnedInterest = getEarnedInterest(capitalResult, termDaysResult);
-    let totalAmount = getTotalAmount(capitalResult, earnedInterest);
+document.querySelector('.form-calculation').addEventListener('click', (e) => {
+    e.preventDefault();
+    const capital = document.getElementById('capital-amount').value;
+    const termDays = document.getElementById('term-days').value;
+    const capitalAmountSpecs = document.querySelector('.capital-amount-specs');
+    const termDaysSpecs = document.querySelector('.term-days-specs');
+    const earnedInterest = getEarnedInterest(capital, termDays);
+    const totalAmount = getTotalAmount(capital, earnedInterest);
+    let showResults = true;
 
-    capitalDisplay.innerHTML = `$${capitalResult}`;
-    termDaysDisplay.innerHTML = `${termDaysResult} días`;
-    earnedInterestDisplay.innerHTML = `$${earnedInterest.toFixed(2)}`;
-    totalAmountDisplay.innerHTML = `$${totalAmount.toFixed(2)}`;
-}
+    if(capital < 1000 || capital > 10000000) {
+        capitalAmountSpecs.innerHTML = 'El monto debe ser mayor a $1.000 y menor a $10.000.000';
+        capitalAmountSpecs.style.color = 'red'
+        showResults = false;
+    } else {
+        capitalAmountSpecs.innerHTML = '(Monto mínimo $1000 - máximo: $10.000.000)'
+        capitalAmountSpecs.style.color = '#363333'
+    }
 
-const clearFixedTerm = () => {
-    form.reset()
-    capitalDisplay.innerHTML = '-';
-    termDaysDisplay.innerHTML = '-';
-    earnedInterestDisplay.innerHTML = '-';
-    totalAmountDisplay.innerHTML = '-';
-}
+    if(termDays < 30 || termDays > 365) {
+        termDaysSpecs.innerHTML = 'Los días deben ser mayores a 30 y menores a 365'
+        termDaysSpecs.style.color = 'red'
+        showResults = false;
+    } else {
+        termDaysSpecs.innerHTML = '(Mínimo 30 días - máximo 365 días)'
+        termDaysSpecs.style.color = '#363333'
+    }
 
+    if(showResults) {
+        document.querySelector('.capital-result').innerHTML = `$${capital.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        document.querySelector('.term-days-result').innerHTML = `${termDays} días`;
+        document.querySelector('.earned-interest-result').innerHTML = `$${earnedInterest.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        document.querySelector('.total-amount-result').innerHTML = `$${totalAmount.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+        document.querySelector('.fixed-term-result').style.display = 'block';
+    }
 
-calculate.addEventListener('click', (e) => {
-    e.preventDefault()
+});
 
-    simulateFixedTerm();
+document.querySelector('.form-clear').addEventListener('click', (e) => {
+    e.preventDefault();
+    document.querySelector('.form').reset();
+    document.querySelector('.capital-result').innerHTML = '-';
+    document.querySelector('.term-days-result').innerHTML = '-';
+    document.querySelector('.earned-interest-result').innerHTML = '-';
+    document.querySelector('.total-amount-result').innerHTML = '-';
+    document.querySelector('.fixed-term-result').style.display = 'none';
+});
 
-    fixedTermResult.style.display = 'block'
-
-})
-
-clear.addEventListener('click', (e) => {
-    e.preventDefault()
-
-    clearFixedTerm()
-
-    fixedTermResult.style.display = 'none';
-})
-
-constituteFixedTerm.addEventListener('click', () => {
+document.querySelector('.constitute-fixed-term').addEventListener('click', () => {
     Swal.fire({
         html: `
         <div class="modal-mini">
@@ -88,3 +68,50 @@ constituteFixedTerm.addEventListener('click', () => {
         padding: '16px'
     })
 })
+
+
+// const interestRate = 0.208;
+
+// const getEarnedInterest = (capital, termDays) => (capital * (interestRate * termDays)) / 100;
+
+// const getTotalAmount = (capital, earnedInterest) => Number(capital) + Number(earnedInterest);
+
+// document.querySelector('.form-calculation').addEventListener('click', (e) => {
+//     e.preventDefault();
+//     const capital = document.getElementById('capital-amount').value;
+//     const termDays = document.getElementById('term-days').value;
+//     const earnedInterest = getEarnedInterest(capital, termDays);
+//     const totalAmount = getTotalAmount(capital, earnedInterest);
+//     document.querySelector('.capital-result').innerHTML = `$${capital.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+//     document.querySelector('.term-days-result').innerHTML = `${termDays} días`;
+//     document.querySelector('.earned-interest-result').innerHTML = `$${earnedInterest.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+//     document.querySelector('.total-amount-result').innerHTML = `$${totalAmount.toLocaleString('de-DE', {minimumFractionDigits: 2, maximumFractionDigits: 2})}`;
+//     document.querySelector('.fixed-term-result').style.display = 'block';
+// });
+
+// document.querySelector('.form-clear').addEventListener('click', (e) => {
+//     e.preventDefault();
+//     document.querySelector('.form').reset();
+//     document.querySelector('.capital-result').innerHTML = '-';
+//     document.querySelector('.term-days-result').innerHTML = '-';
+//     document.querySelector('.earned-interest-result').innerHTML = '-';
+//     document.querySelector('.total-amount-result').innerHTML = '-';
+//     document.querySelector('.fixed-term-result').style.display = 'none';
+// });
+
+// document.querySelector('.constitute-fixed-term').addEventListener('click', () => {
+//     Swal.fire({
+//         html: `
+//         <div class="modal-mini">
+//             <h2 class="modal-mini-title">Constituir Plazo Fijo</h2>
+//             <p class="modal-mini-description">Para constituir un plazo fijo en pesos en tu cuenta, debes iniciar sesión con tu usuario y contraseña.</p>
+//         </div> `,
+//         showConfirmButton: true,
+//         confirmButtonText: 'Volver al Simulador',
+//         customClass: {
+//             confirmButton: 'main-btn'
+//         },
+//         buttonsStyling: false,
+//         padding: '16px'
+//     })
+// })
